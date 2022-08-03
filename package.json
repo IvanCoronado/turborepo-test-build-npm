@@ -7,10 +7,12 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --cache-dir=.turbo",
+    "deploy": "turbo run deploy --cache-dir=.turbo",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "vercel-build": "turbo run vercel-build --cache-dir=.turbo"
   },
   "devDependencies": {
     "eslint-config-custom": "*",

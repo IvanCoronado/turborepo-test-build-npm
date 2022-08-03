@@ -3,7 +3,18 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": ["dist/**", ".next/**"],
+      "cache": false
+    },
+    "deploy": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "cache": false
+    },
+    "vercel-build": {
+      "dependsOn": [],
+      "outputs": [".next/**"],
+      "cache": false
     },
     "lint": {
       "outputs": []
