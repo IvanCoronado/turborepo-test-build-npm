@@ -12,7 +12,8 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "vercel-build": "turbo run vercel-build --cache-dir=.turbo"
+    "vercel-build": "npx vercel pull --yes --environment=production && npx vercel build --prod",
+    "vercel-deploy": "npx vercel deploy --prod --prebuilt"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
