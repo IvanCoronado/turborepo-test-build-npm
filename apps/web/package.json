@@ -7,8 +7,8 @@
     "vercel-build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build": "npx vercel pull --yes --environment=production -t $VERCEL_TOKEN && npx vercel build --prod -t $VERCEL_TOKEN",
-    "deploy": "npx vercel deploy --prod --prebuilt -t $VERCEL_TOKEN"
+    "build": "npx vercel pull --yes --environment=production && npx vercel build --prod",
+    "deploy": "npx vercel deploy --prod --prebuilt"
   },
   "dependencies": {
     "next": "12.2.3",
